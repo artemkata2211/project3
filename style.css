@@ -1,0 +1,131 @@
+@font-face {
+  font-family: "TT Lakes";
+  src: url(fonts/TTLakes-Regular.woff) format("woff");
+}
+body {
+  font-family: "TT Lakes";
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  height: 100%;
+}
+body::before {
+content: '';
+position: absolute;
+width: 100%;
+height: 2px;
+background-color: aqua;
+top: 0;
+bottom: 0;
+}
+.content {
+height: 100%;
+
+}
+.content__header {
+opacity: 0.6;
+margin: 10px;
+
+}
+div .swiper {
+  position: relative;
+  display: flex;
+  overflow:auto;
+  width: auto;
+  height: auto;
+  }
+
+ div .swiper-wrapper {
+  gap: 15px;
+  padding-left: 10px;
+  }
+  
+
+ div .swiper-slide {
+  display: flex;
+  width: 220px;
+  height: 60px;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #c0c0c0;
+  border-radius: 5px;
+  }
+   div .swiper-link {
+    display: block;
+  background: url(./images/go.svg) no-repeat center ;
+  width: 50px ;
+  height: 50px ;
+  padding: 0 ;
+  border: none ;
+  font: inherit ;
+  color: inherit ;
+  background-color: transparent ;
+  cursor: pointer;
+  }
+ div .swiper-pagination-bullet {
+  background:gray;
+  width: 10px;
+  height: 10px;
+} 
+.content__contiunuation {
+display:none;
+padding: 0 ;
+border: none ;
+font: inherit ;
+color: inherit ;
+background-color: transparent ;
+cursor: pointer;
+}
+.swiper-horizontal>.swiper-pagination-bullets,.swiper-pagination-bullets.swiper-pagination-horizontal,.swiper-pagination-custom,.swiper-pagination-fraction {
+  position: static;
+}
+
+
+@media (min-width: 768px) {
+div .swiper-wrapper {
+flex-wrap: wrap;
+gap: 25px;
+  }
+.content__contiunuation {
+display: block;
+position: relative;
+width: auto;
+height: auto;
+top: 15px;
+left: 30px;
+}
+.content__contiunuation::before {
+position: absolute;
+content: '';
+background: url(./images/expand.svg) no-repeat ;
+width: 100%;
+height: 100%;
+right: 25px;
+top: 0;
+bottom: 0;
+ }
+ div .swiper-slide.hidden {
+display: none;
+ }
+ .hiddenly {
+display: block;
+ }
+ .content__contiunuation.icon::before {
+position: absolute;
+content: '';
+background: url(./images/icon.svg) no-repeat;
+width: 100%;
+height: 100%;
+right: 15px;
+top: 5px;
+bottom: 0;
+ }
+}
+@media (min-width: 1120px) {
+div .swiper-slide.hidden:nth-child(7),
+div .swiper-slide.hidden:nth-child(8) {
+display: flex;
+}
+}
+
