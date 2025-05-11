@@ -25,7 +25,6 @@ for (let hidden of hiddens) {
     button.classList.toggle('icon');
 hidden.classList.toggle('hidden');
 button.textContent = 'Скрыть';
-button.style.backgroundImage = './images/icon.svg'
   } else {
      hidden.classList.add('hidden');
     button.textContent = 'Показать еще';
