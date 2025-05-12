@@ -19,7 +19,7 @@ const swiper = new Swiper('.swiper', {
 let button = document.querySelector('.content__contiunuation');
 let hiddens = document.querySelectorAll('.hidden');
 
-button.onclick = function () {
+button.addEventListener('click', function ()  {
 for (let hidden of hiddens) {
   if (hidden.classList.contains('hidden')) {
     button.classList.toggle('icon');
@@ -31,7 +31,8 @@ button.textContent = 'Скрыть';
     button.classList.remove('icon');
   }
 }
-}
+})
+
 
 
 
